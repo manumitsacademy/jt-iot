@@ -1,0 +1,28 @@
+
+<div id="d1">
+  <h1>Home Automation Dash board</h1>
+     <div class="row">
+         <div class="col-md-6 text-center">
+             <ngx-gauge [type]="gaugeType" 
+                     [value]="h" 
+                     [label]="humidityLabel"  
+                     [append]="humidityAppendText">
+             </ngx-gauge>
+         </div>
+         <div class="col-md-6 text-center">
+             <ngx-gauge [type]="gaugeType" 
+                     [value]="t" 
+                     [label]="temperatureLabel"  
+                     [append]="temperatureAppendText">
+             </ngx-gauge>         
+         </div>
+     </div>    
+     <div class="row">
+         <div class="col-md-6 text-center">
+             <label class="switch">
+                 <input type="checkbox" [(ngModel)]="motorSwitch" (change)="motorRestart()">
+                 <span class="slider round"></span>
+             </label>
+         </div>
+     </div> 
+ </div>

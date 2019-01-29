@@ -1,0 +1,67 @@
+<fieldset [formGroup]="companyForm">
+
+  <legend>companyForm</legend>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="companyname">Company Name</label>  
+    <div class="col-md-4">
+    <input id="companyname" name="companyname" formControlName="companyname" type="text" placeholder="Company Name Please" class="form-control input-md">
+
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="address">Address</label>  
+    <div class="col-md-4">
+    <input id="address" name="address" formControlName="address"  type="text" placeholder="Address Please" class="form-control input-md">
+ 
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="gitmum">GST Number</label>  
+    <div class="col-md-4">
+    <input id="gitmum" name="gstmum" formControlName="gstnumber"  type="text" placeholder="GST Number please" class="form-control input-md">
+   
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="email">email </label>  
+    <div class="col-md-4">
+    <input id="email" name="email" formControlName="email"  type="text" placeholder="Email Please" class="form-control input-md">
+   
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="contactpersonname">contact person name</label>  
+    <div class="col-md-4">
+    <input id="contactpersonname" name="contactpersonname" formControlName="contactperson" type="text" placeholder="contact person name" class="form-control input-md">
+ 
+    </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="phonenumber">Phone Number</label>  
+    <div class="col-md-4">
+    <input id="phonenumber" name="phonenumber" formControlName="phonenumber" type="text" placeholder="Phone Number Please" class="form-control input-md">
+  
+    </div>
+  </div>
+  
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for=""></label>
+    <div class="col-md-4">
+      <button id="" name="" class="btn btn-primary" (click)="addCompany()">Add Company</button>
+    </div>
+  </div>
+  
+</fieldset>
