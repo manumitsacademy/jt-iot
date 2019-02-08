@@ -1,23 +1,53 @@
 
-<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item active">
       <a class="nav-link" routerLink="home" *ngIf="loginstatus">DashBoard</a>
     </li>
-    <li class="nav-item active">
-      <a class="nav-link" routerLink="company" *ngIf="loginstatus">Company</a>
+    <li class="nav-item active dropdown" *ngIf="loginstatus">
+        <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbardrop" data-toggle="dropdown">
+            Company
+        </a>
+        <div class="dropdown-menu dropdown-content">
+          <a class="dropdown-item" routerLink="/company">All Companies</a>
+          <a class="dropdown-item" routerLink="/addcompany">Add Company</a>
+        </div>
     </li>
-    <li class="nav-item active">
-      <a class="nav-link" routerLink="addcompany" *ngIf="loginstatus">AddCompany</a>
+    <li class="nav-item active dropdown" *ngIf="loginstatus">
+        <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbardrop" data-toggle="dropdown">
+            Device
+        </a>
+        <div class="dropdown-menu  dropdown-content">
+          <a class="dropdown-item" href="#">All Devices</a>
+          <a class="dropdown-item" href="#">Add Device</a>
+        </div>
+    </li>
+    <li class="nav-item active dropdown" *ngIf="loginstatus">
+        <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbardrop" data-toggle="dropdown">
+            Society
+        </a>
+        <div class="dropdown-menu  dropdown-content">
+          <a class="dropdown-item" href="#">All Devices</a>
+          <a class="dropdown-item" href="#">Add Device</a>
+        </div>
+    </li>
+    <li class="nav-item active dropdown" *ngIf="loginstatus">
+        <a class="nav-link dropdown-toggle dropbtn" href="#" id="navbardrop" data-toggle="dropdown">
+            User
+        </a>
+        <div class="dropdown-menu  dropdown-content">
+          <a class="dropdown-item" href="#">All Devices</a>
+          <a class="dropdown-item" href="#">Add Device</a>
+        </div>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="" *ngIf="!loginstatus">Login</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" *ngIf="loginstatus">Logout</a>
+    <li class="nav-item" *ngIf="loginstatus">
+      <a class="nav-link" href="#">Logout</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="signup" *ngIf="!loginstatus">Signup</a>
-    </li>
+    </li>    
   </ul>
 </nav>

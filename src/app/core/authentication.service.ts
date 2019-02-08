@@ -14,7 +14,7 @@ export class AuthenticationService {
   signup(credentials){
     return this.http.post('http://localhost:4000/signup',credentials)    
   }
-  emitUserStatus(status){
+  emitUserStatus(status){    
     this.userStatusEvent$.emit({loginstatus:status});
   }
 }

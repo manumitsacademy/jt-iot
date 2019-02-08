@@ -1,32 +1,38 @@
 
-<div id="d1" class="container">
-  <h1>Home Automation Dash board</h1>
-     <div class="row" *ngIf="deviceStatusFlag=='connected'">
-         <div class="col-md-6 text-center">
-             <ngx-gauge [type]="gaugeType" 
-                     [value]="h" 
-                     [label]="humidityLabel"  
-                     [append]="humidityAppendText">
-             </ngx-gauge>
-         </div>
-         <div class="col-md-6 text-center">
-             <ngx-gauge [type]="gaugeType" 
-                     [value]="t" 
-                     [label]="temperatureLabel"  
-                     [append]="temperatureAppendText">
-             </ngx-gauge>         
-         </div>
-         <div class="row">
-            <div class="col-md-6 text-center">
-                <label class="switch">
-                    <input type="checkbox" [(ngModel)]="motorSwitch" (change)="motorRestart()">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-        </div> 
-     </div>  
-     <div class="row" *ngIf="deviceStatusFlag !='connected'">
-        <div class="jumbotron">No Device Connected</div>
-     </div>  
-    
+<div id="d1" class="container" >
+  <h1>{{username}} Dash board</h1>
+  <div  *ngIf="deviceStatusFlag =='true'">
+  <div class="card shadow p-3 mb-5 bg-white rounded" style="width:300px">
+    <div class="card-body text-center">
+        <ngx-gauge [type]="gaugeType" 
+                [value]="h" 
+                [label]="humidityLabel"  
+                [append]="humidityAppendText">
+        </ngx-gauge>        
+        <a class="btn btn-sm text-white" [ngClass]="inletValveStatus?'btn-success':'btn-danger'">
+            Inlet Valve Status<br>
+            <span *ngIf="inletValveStatus">ON</span>
+            <span *ngIf="!inletValveStatus">OFF</span>
+        </a>&nbsp;
+        <a class="btn btn-light btn-sm">Tank Switch<br>
+            <label class="switch" id="motorswitch">
+                <input type="checkbox" [(ngModel)]="motorSwitch" (change)="motorRestart()">
+                <span class="slider round"></span>
+            </label>
+        </a>
+        <br>
+        <br>
+        <h6 class="card-title">{{macid}}</h6>
+    </div>
+  </div>
+  </div>
+  <div class="row" *ngIf="deviceStatusFlag !='true'">
+    <div class="jumbotron  shadow p-3 mb-5 bg-white rounded">
+        No Device Connected
+    </div>
+  </div> 
+ 
  </div>
+      
+  
+    

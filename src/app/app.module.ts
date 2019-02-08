@@ -9,7 +9,10 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { DashboardModule} from './dashboard/dashboard.module';
-import { CompanyModule } from './company/company.module'
+import { CompanyModule } from './company/company.module';
+import { DeviceModule } from './device/device.module';
+import { UserModule } from './user/user.module';
+import { SocietyModule } from './society/society.module'
 @NgModule({
   declarations: [
     AppComponent
@@ -24,7 +27,10 @@ import { CompanyModule } from './company/company.module'
     ReactiveFormsModule,
     CoreModule,
     DashboardModule,
-    CompanyModule
+    CompanyModule,
+    DeviceModule,
+    UserModule,
+    SocietyModule
   ],
   providers: [],
   bootstrap: [AppComponent]
